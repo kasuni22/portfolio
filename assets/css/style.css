@@ -304,6 +304,7 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -367,12 +368,13 @@ h6 {
 #hero .btn-scroll:hover {
   color: #0184ff;
 }
-
 .btn-about {
+ 
   color: #ffffff; /* Change text color */
   transition: background-color 0.3s ease; /* Smooth transition */
   animation: up-down 1s ease-in-out infinite alternate-reverse both;
 }
+
 
 @media (min-width: 1024px) {
   #hero {
@@ -380,45 +382,14 @@ h6 {
   }
 }
 
-@media (max-width: 767px) {
-  #hero {
-    height: 75vh;
-    background-position: center;
-  }
-
-  #hero h1 {
-    font-size: 36px;
-  }
-
-  #hero h2 {
-    font-size: 12px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  #hero .btn-scroll i {
-    font-size: 32px;
-  }
-}
-
 @media (max-width: 575px) {
-  #hero {
-    height: 70vh;
-    background-position: center;
-  }
-
   #hero h1 {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   #hero h2 {
-    font-size: 11px;
     text-align: center;
-    margin-bottom: 20px;
-  }
-
-  #hero .btn-scroll i {
-    font-size: 28px;
+    margin-bottom: 30px;
   }
 }
 
@@ -426,6 +397,7 @@ h6 {
   0% {
     transform: translateY(5px);
   }
+
   100% {
     transform: translateY(-5px);
   }
