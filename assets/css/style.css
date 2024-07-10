@@ -768,8 +768,8 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
-  background-position: center center;
+  background: url("../img/testimonials-bg 1.jpg") no-repeat;
+  background-position: center top;
   background-size: cover;
   position: relative;
 }
@@ -787,10 +787,7 @@ section {
 /* Media query for mobile devices */
 @media (max-width: 500px) {
   .testimonials {
-    padding:auto;
-    background-position:left; 
-    background-size:auto;
-    position:auto;
+    background-position: 20% 75%;
   }
 }
 
