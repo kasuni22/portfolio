@@ -787,7 +787,10 @@ section {
 /* Media query for mobile devices */
 @media (max-width: 500px) {
   .testimonials {
-    background-position: left 35% bottom 45%; /* Align the background image to the right on mobile */
+    padding:auto;
+    background-position:left; 
+    background-size:auto;
+    position:auto;
   }
 }
 
