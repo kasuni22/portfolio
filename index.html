@@ -125,7 +125,7 @@
                   <ul>
                     <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>K.H.Kasuni Madeesha</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Matara, Sri Lanka</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>website:</strong> <a href="#">Portfolio</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>website:</strong> <a href="https://kasuni22.github.io/portfolio/"target="_blank">Portfolio</a></li>
 
                   </ul>
                 </div>
@@ -555,28 +555,42 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            <form id="contactForm" action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+                <div class="validation"></div>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required>
+                <div class="validation"></div>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:8" data-msg="Please enter at least 8 chars of subject" required>
+            <div class="validation"></div>
+        </div>
+        <div class="form-group mt-3">
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" data-rule="required" data-msg="Please write something for us" required></textarea>
+            <div class="validation"></div>
+        </div>
+        <div class="my-3">
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+    </form>
+    
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        var mailtoLink = 'mailto:ashendissanayaka0@gmail.com?subject=' + encodeURIComponent(subject) +
+                         '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+        window.location.href = mailtoLink;
+    });
+    </script>
           </div>
 
         </div>
@@ -604,7 +618,7 @@
       </div>
       <div class="credits">
         
-        Designed by <a href="https://bootstrapmade.com/">Kasuni Madeesha</a>
+        Designed by <a href="https://kasuni22.github.io/portfolio/"target="_blank"> Kasuni Madeesha</a>
       </div>
     </div>
   </footer><!-- End Footer -->
